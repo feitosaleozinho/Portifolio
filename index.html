@@ -1,12 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titulo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leonardo Feitosa | Portfólio</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .gradient-bg {
+      background: linear-gradient(270deg, #0f172a, #1e293b, #334155);
+      background-size: 600% 600%;
+      animation: GradientAnimation 16s ease infinite;
+    }
+    @keyframes GradientAnimation { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
+    .blob { position: absolute; width: 400px; height: 400px;
+      background: radial-gradient(circle at 50% 50%, rgba(6,182,212,0.6), transparent 70%);
+      filter: blur(100px); animation: blobMove 20s infinite;
+    }
+    .blob:nth-child(1){top:-100px;left:-100px}
+    .blob:nth-child(2){bottom:-120px;right:-80px;animation-delay:5s}
+    .blob:nth-child(3){top:40%;right:-150px;animation-delay:10s}
+    @keyframes blobMove{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(50px,-30px) scale(1.1)}}
+    .profile-img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid #06b6d4;box-shadow:0 4px 15px rgba(0,0,0,0.5)}
+  </style>
 </head>
-<body>
-    <h1>Gatos</h1>
-    <img src="./images/images.jpg">
+<body class="gradient-bg text-gray-100 relative overflow-x-hidden scroll-smooth">
+  <div class="blob"></div><div class="blob"></div><div class="blob"></div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative flex flex-col items-center justify-center h-screen text-center px-6" data-aos="fade-up">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 flex flex-col items-center space-y-6 md:space-y-8 max-w-md">
+      <!-- Foto Placeholder -->
+      <div class="w-40 h-40 bg-gray-700 rounded-full overflow-hidden border-4 border-cyan-500">
+        <img src="./images/minhafoto.jpeg" alt="Foto de Leonardo Feitosa" class="object-cover w-full h-full">
+      </div>
+      <!-- Nome -->
+      <h1 class="text-5xl md:text-6xl font-extrabold text-white">Leonardo Feitosa</h1>
+      <!-- Tagline -->
+      <p class="text-lg md:text-xl text-gray-300">Cybersecurity · Cloud </p>
+      <!-- Botão -->
+      <a href="https://www.linkedin.com/in/leonardo-feitosa-9b69b9243/" target="_blank" class="mt-4 bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-full font-medium transition">
+        Conecte-se no LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-cyan-400 mb-10 text-center">Projetos Principais</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <a href="#LINK_PROJETO_1" target="_blank" class="group block bg-gray-800 bg-opacity-60 backdrop-blur-md p-6 rounded-3xl shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold text-white mb-3 group-hover:text-cyan-300">Projeto 1</h3>
+        <p class="text-gray-300 mb-4">Descrição breve do projeto 1.</p>
+        <span class="inline-block text-cyan-400 opacity-0 group-hover:opacity-100 transition">Ver projeto →</span>
+      </a>
+      <a href="#LINK_PROJETO_2" target="_blank" class="group block bg-gray-800 bg-opacity-60 backdrop-blur-md p-6 rounded-3xl shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold text-white mb-3 group-hover:text-cyan-300">Projeto 2</h3>
+        <p class="text-gray-300 mb-4">Descrição breve do projeto 2.</p>
+        <span class="inline-block text-cyan-400 opacity-0 group-hover:opacity-100 transition">Ver projeto →</span>
+      </a>
+      <a href="#LINK_PROJETO_3" target="_blank" class="group block bg-gray-800 bg-opacity-60 backdrop-blur-md p-6 rounded-3xl shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold text-white mb-3 group-hover:text-cyan-300">Projeto 3</h3>
+        <p class="text-gray-300 mb-4">Descrição breve do projeto 3.</p>
+        <span class="inline-block text-cyan-400 opacity-0 group-hover:opacity-100 transition">Ver projeto →</span>
+      </a>
+      <a href="#LINK_PROJETO_4" target="_blank" class="group block bg-gray-800 bg-opacity-60 backdrop-blur-md p-6 rounded-3xl shadow-2xl hover:shadow-3xl transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold text-white mb-3 group-hover:text-cyan-300">Projeto 4</h3>
+        <p class="text-gray-300 mb-4">Descrição breve do projeto 4.</p>
+        <span class="inline-block text-cyan-400 opacity-0 group-hover:opacity-100 transition">Ver projeto →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section id="tech" class="py-20 px-6 bg-gray-900 bg-opacity-70 backdrop-blur-md" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-cyan-400 mb-10 text-center">💻 Tech Stack</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <img src="https://skillicons.dev/icons?i=aws,azure,linux,bash,git,github,py,flutter,html,css,js" class="h-12">
+      <img src="https://skillicons.dev/icons?i=vscode,debian,nginx,grafana,go" class="h-12">
+    </div>
+  </section>
+
+  <!-- GitHub Insights -->
+  <section id="insights" class="py-20 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-cyan-400 mb-8 text-center">📊 GitHub Insights</h2>
+    <div class="flex flex-col md:flex-row items-stretch gap-6">
+      <div class="flex-1 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition" data-aos="zoom-in-right">
+        <img src="https://github-readme-streak-stats.herokuapp.com?user=feitosaleozinho&theme=react&hide_border=true" class="w-full object-cover">
+      </div>
+      <div class="flex-1 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition" data-aos="zoom-in-left">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=feitosaleozinho&layout=compact&theme=react&hide_border=true" class="w-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-400 bg-black bg-opacity-80" data-aos="fade-up">
+    © 2025 Leonardo Feitosa. Todos os direitos reservados.
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init({ duration: 1200, once: true }); </script>
 </body>
 </html>
